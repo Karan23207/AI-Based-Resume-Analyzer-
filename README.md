@@ -1,5 +1,7 @@
 # 🤖 AI Resume Analyzer
 
+[![Live Demo](https://img.shields.io/badge/Live-Demo-success?style=for-the-badge)](https://ai-based-resume-analyzer-ulai.onrender.com)
+
 ![AI Resume Analyzer](static/cover-img.png)
 
 An AI-powered web application that analyzes resumes and provides an ATS-style score, detected skills, resume ranking, and AI-generated career feedback. The application is built with **Python Flask**, **SQLite**, **PyPDF2**, **Google OAuth**, and an **OpenRouter-compatible AI API**.
