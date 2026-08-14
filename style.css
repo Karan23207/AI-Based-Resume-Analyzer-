@@ -1,0 +1,49 @@
+
+.gradient-background {
+    background: linear-gradient(to right, #0d3b66, #2d1e70, #6a43aa);
+    color: white;
+}
+
+.hero-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+    padding: 7rem 5%;
+}
+
+img{
+   width: 100%;
+   border-radius: 12px;
+   object-fit: cover;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    color: #212529;
+    margin: 0;
+    padding: 0;
+}
+.btn-analyze{
+    background: white;
+    color: #1e1e1e;
+    padding: 14px 28px;
+    border-radius: 10px;
+    font-weight: 600;
+    border: none;
+    transition: 0.3s ease;
+}
+
+.btn-analyze:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.resume-card{
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}

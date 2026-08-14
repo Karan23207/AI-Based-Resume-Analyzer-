@@ -1,0 +1,111 @@
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#f5f7fb;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+    position:fixed;
+    width:250px;
+    height:100vh;
+    background:#0f172a;
+    padding:30px 20px;
+}
+
+.logo{
+    color:white;
+    margin-bottom:40px;
+}
+
+.sidebar a{
+    display:block;
+    color:#cbd5e1;
+    text-decoration:none;
+    margin:18px 0;
+    font-size:18px;
+    transition:0.3s;
+}
+
+.sidebar a:hover{
+    color:white;
+    padding-left:5px;
+}
+
+.logout-btn{
+    margin-top:50px;
+    color:#ff6b6b !important;
+}
+
+/* MAIN */
+
+.main-content{
+    margin-left:250px;
+    padding:40px;
+}
+
+.topbar{
+    margin-bottom:30px;
+}
+
+/* CARDS */
+
+.dashboard-card{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.dashboard-card:hover{
+    transform:translateY(-5px);
+}
+
+.score{
+    font-size:35px;
+    font-weight:bold;
+    color:#2563eb;
+}
+
+/* UPLOAD */
+
+.upload-box{
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+#upload-section:target{
+
+    animation: glowEffect 4s ease;
+
+}
+
+@keyframes glowEffect{
+
+    0%{
+        border:4px solid #2563eb;
+        box-shadow:0 0 30px rgba(37,99,235,0.8);
+        transform:scale(1.01);
+    }
+
+    70%{
+        border:4px solid #2563eb;
+        box-shadow:0 0 30px rgba(37,99,235,0.8);
+        transform:scale(1.01);
+    }
+
+    100%{
+        border:none;
+        box-shadow:none;
+        transform:scale(1);
+    }
+
+}
