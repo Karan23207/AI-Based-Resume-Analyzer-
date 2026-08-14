@@ -1,1 +1,5 @@
-
+Flask
+PyPDF2
+Authlib
+openai
+gunicorn
