@@ -45,7 +45,6 @@ init_db()
 
 app.secret_key = "secretkey"
 
-# client = genai.Client(api_key="AIzaSyAUNa_FyfrD85kyku75Jt1e_TbdYjrbLuo")
 client = OpenAI(
     base_url="url",
     api_key="your_key"
@@ -58,9 +57,9 @@ google = oauth.register(
 
     client_id="your_client_id",
 
-    client_secret="sklcmelvefvfvf",
+    client_secret="write_client_secret",
 
-    server_metadata_url='https://accounts.google.com/',
+    server_metadata_url='write_url',
 
     client_kwargs={
         'scope': 'openid email profile'
@@ -81,23 +80,7 @@ def login():
     return google.authorize_redirect(redirect_uri)
 
 
-# GOOGLE CALLBACK
-# @app.route('/google-authorized')
-# def authorized():
-#
-#     token = google.authorize_access_token()
-#
-#     user_info = token['userinfo']
-#
-#     session['user'] = user_info
-#
-#     return f"""
-#     <h2>Welcome {user_info['name']}</h2>
-#
-#     <p>Email: {user_info['email']}</p>
-#
-#     <a href="/logout">Logout</a>
-#     """
+
 @app.route('/authorize')
 def authorize():
 
@@ -109,21 +92,7 @@ def authorize():
 
     return redirect(url_for('dashboard'))
 
-# DASHBOARD
-# @app.route("/dashboard")
-# def dashboard():
-#
-#     if "user" not in session:
-#         return redirect("/")
-#
-#     user = session['user']
-#
-#     username = user['name']
-#
-#     return render_template(
-#         "dashboard.html",
-#         username=username
-#     )
+
 @app.route("/dashboard")
 def dashboard():
 
