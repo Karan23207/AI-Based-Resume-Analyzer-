@@ -2,4 +2,5 @@ Flask
 PyPDF2
 Authlib
 openai
+python-dotenv
 gunicorn
