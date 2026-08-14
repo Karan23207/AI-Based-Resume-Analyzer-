@@ -1,6 +1,6 @@
 # 🤖 AI Resume Analyzer
 
-![AI Resume Analyzer](cover-img.png)
+![AI Resume Analyzer](static/cover-img.png)
 
 An AI-powered web application that analyzes resumes and provides an ATS-style score, detected skills, resume ranking, and AI-generated career feedback. The application is built with **Python Flask**, **SQLite**, **PyPDF2**, **Google OAuth**, and an **OpenRouter-compatible AI API**.
 
