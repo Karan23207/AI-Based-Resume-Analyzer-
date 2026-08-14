@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Analysis</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='result.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1 class="title">AI Resume Analysis</h1>
+
+    <!-- SCORE CARD -->
+    <div class="score-card">
+
+        <h2>ATS Score</h2>
+
+        <div class="score-circle">
+            {{ score }}%
+        </div>
+
+    </div>
+
+    <!-- SKILLS -->
+    <div class="card">
+
+        <h2>Skills Found</h2>
+
+        <div class="skills-container">
+
+            {% for skill in skills %}
+                <span class="skill-tag">{{ skill }}</span>
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+    <!-- AI ANALYSIS -->
+    <div class="card">
+
+        <h2>AI Analysis</h2>
+
+        <div class="analysis-box">
+            {{ analysis }}
+        </div>
+
+    </div>
+
+    <!-- BUTTONS -->
+    <div class="button-container">
+
+        <a href="/dashboard" class="btn">Home</a>
+
+        <a href="/dashboard" class="btn secondary-btn">
+            Analyze Another Resume
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>

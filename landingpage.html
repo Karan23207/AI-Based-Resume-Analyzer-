@@ -1,0 +1,95 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>Home</title>-->
+<!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">-->
+<!--    <link rel="stylesheet" href="./style.css" >-->
+<!--    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>-->
+
+<!--</head>-->
+<!--<body>-->
+<!-- &lt;!&ndash; HERO SECTION &ndash;&gt;-->
+<!--  <section id="title" class="gradient-background hero-section text-light">-->
+<!--    <div class="container">-->
+<!--      <div class="row align-items-center g-5">-->
+<!--        <div class="col-lg-7">-->
+<!--          <h1 class="display-3 fw-bold mb-3">Stop Guessing, Start Knowing.</h1>-->
+<!--          <h3 class="mb-3">Your Resume, Perfected by AI Precision.</h3>-->
+<!--          <p class="lead mb-4">Get the data-driven advantage that turns applications into interviews.</p>-->
+<!--          <a href="/login" class="btn btn-lg btn-light text-dark fw-semibold px-4 py-2 btn-analyze">Login</a>-->
+<!--        </div>-->
+<!--        <div class="col-lg-5 text-center">-->
+<!--            <div class="resume-card">-->
+<!--          <img src="cover-img.png" alt="AI Resume" class="img-fluid rounded-4 shadow-lg" width="400">-->
+<!--            </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </section>-->
+<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>-->
+<!--</body>-->
+<!--</html>-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+
+<section id="title" class="gradient-background hero-section text-light">
+    <div class="container">
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-7">
+                <h1 class="display-3 fw-bold mb-3">
+                    Stop Guessing, Start Knowing.
+                </h1>
+
+                <h3 class="mb-3">
+                    Your Resume, Perfected by AI Precision.
+                </h3>
+
+                <p class="lead mb-4">
+                    Get the data-driven advantage that turns applications into interviews.
+                </p>
+
+                <a href="/login"
+                   class="btn btn-lg btn-light text-dark fw-semibold px-4 py-2 btn-analyze">
+                    Login
+                </a>
+            </div>
+
+            <div class="col-lg-5 text-center">
+                <div class="resume-card">
+
+                    <img src="{{ url_for('static', filename='cover-img.png') }}"
+                         alt="AI Resume"
+                         class="img-fluid rounded-4 shadow-lg"
+                         width="400">
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
