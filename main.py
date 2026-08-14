@@ -5,7 +5,9 @@ from authlib.integrations.flask_client import OAuth
 import re
 from openai import OpenAI
 import sqlite3
+from dotenv import load_dotenv
 
+load_dotenv()
 DB_PATH = "database/resume.db"
 app = Flask(__name__)
 
@@ -43,11 +45,11 @@ def init_db():
 
 init_db()
 
-app.secret_key = "secretkey"
+app.secret_key = os.getenv("FLASK_SECRET_KEY")
 
 client = OpenAI(
-    base_url="url",
-    api_key="your_key"
+    base_url="https://openrouter.ai/api/v1",
+    api_key=os.getenv("OPENROUTER_API_KEY")
 )
 # GOOGLE OAUTH
 oauth = OAuth(app)
@@ -55,11 +57,11 @@ oauth = OAuth(app)
 google = oauth.register(
     name='google',
 
-    client_id="your_client_id",
+    client_id=os.getenv("GOOGLE_CLIENT_ID"),
 
-    client_secret="write_client_secret",
+    client_secret=os.getenv("GOOGLE_CLIENT_SECRET"),
 
-    server_metadata_url='write_url',
+    server_metadata_url='https://accounts.google.com/.well-known/openid-configuration',
 
     client_kwargs={
         'scope': 'openid email profile'
